@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{title}</title>
+  <meta name="description" content="BA Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{baseURL}/static/css/kube.css" type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="{baseURL}/static/css/master.css" type="text/css" media="screen" charset="utf-8"> 
+  <link href="{baseURL}/static/css/font-awesome.css" rel="stylesheet">
+</head> 
+<body> 
+  <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+
+    <!--*************
+        * JavaScript
+        *************-->
+        <script src="{baseURL}/static/js/jquery.min.js"></script>
+        <!-- <script src="{baseURL}/static/js/json2.js" charset="utf-8"></script> -->
+        <script src="{baseURL}/static/js/moment.min.js"></script>
+        <script src="{baseURL}/modules.js"></script>
+        <script src="{baseURL}/static/js/jquery.couch.js"></script>
+        <!-- <script src="{baseURL}/static/js/jquery.couch.app.js"></script> -->
+        <!-- <script src="{baseURL}/static/js/jquery.evently.js"></script> -->
+        <!-- <script src="{baseURL}/static/js/jquery.pathbinder.js"></script> -->
+        <script src="{baseURL}/static/js/kube.buttons.js"></script>
+
+        {content|s}
+
+        <div id="popup"><!-- Gespeichert --></div>
+
+    <!--[if lt IE 9]>
+      <script src="{baseURL}/static/js/html5shiv.js"></script>
+    <![endif]-->
+
+  </body>
+  <noscript>
+    <div class="units-row" id="noscript">
+      <div class="unit-centered unit-70 error">
+        <strong>
+        Sorry, this won't work without JavaScript. 
+        <hr>
+        'Tschuldigung, diese Seite funktioniert nicht ohne JavaScript.
+        </strong>
+      </div>
+    </div>
+  </noscript>
+  </html>

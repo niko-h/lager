@@ -1,0 +1,285 @@
+<div class="head">
+  <div class="units-row units-split wrapper">
+    <span class="unit-33">
+      <a id="logo" href="{baseURL}/dblist"><img src="{baseURL}/static/css/lagerklein2.png" alt="lager"></a>
+      <span class="head-separator"></span>
+      <a href="{baseURL}/dblist" class="btn rel"><span class="buttonleft"></span>&nbsp;&nbsp;&nbsp; Katalogübersicht</a>
+    </span>
+    <span class="unit-push-right">
+      <a id="title"><span id="db">{?db}{db}{:else}Katalog{/db}</span> <span id="titlejob">betrachten</span></h1></a>
+      <button type="button" class="btn btn-blue" id="changeviewbtn" data-toggle="buttons" data-type="toggle" data-target="#editstate"><i class="icon-edit"></i> Bearbeiten</button>
+      <input type="text" id="editstate" value="0" hidden style="display:none;" />
+    </span>
+    <!-- <div class="unit-push-right">
+      <span class="head-separator"></span>
+      <a id="prefbtn" class="btn" href="#"><i class='icon-cog'></i> Einstellungen</a> 
+      <a href="?logout" name="logoutbtn" id="logoutbtn" class="btn color-red"><i class='icon-off'></i> Abmelden</a>
+    </div> -->
+  </div>
+</div>
+
+<div id="layoutview" class="modal">
+  <div class="modalcontent">
+    <div class="units-row modalhead">
+      <span class="unit-50"><legend>Tabelle erstellen</legend> <a id="layoutviewhelpbtn" class="btn"><i class="icon-question-sign"></i> Hilfe</a></span>
+      <span class="unit-push-right"><a href="#" class="color-red close" id="previewclose" onclick="$('#layoutview').hide();templayout = layout;"></i></a></span>
+    </div>
+    <form method="post" action="javascript:void(0);" id="" class="forms forms-columnar">
+      <p>
+        <label>Neue Spalte</label>
+        <ul class="forms-inline-list">
+          <li>
+            <input type="text" name="layoutfieldname" id="layoutfieldname">
+            <div class="forms-desc">Name der Spalte</div>
+          </li>
+          <li>
+            <select id="layoutfieldtype">
+              <option>Text</option>
+              <option>Zahl</option>
+              <option>Datum</option>
+              <option>Preis</option>
+              <!-- <option>Anhang</option> -->
+            </select>
+            <div class="forms-desc">Format</div>
+          </li>
+          
+          <li>
+            <input type="submit" class="btn" id="addlayoutfieldbtn" value="Hinzufügen">
+            <div class="forms-desc">&nbsp;</div>
+          </li>
+        </ul>
+      </p>
+    </form>
+      
+    <h5 id="previewheadline" class="forms-section">Vorschau auf die Tabelle</h5>
+    <div id="layoutpreviewcontainer" class="table-container">
+      <table id="layoutpreview" class="width-100 table-striped table-bordered">
+        <thead class="thead-gray">
+          <tr>
+            <!-- <th><a href="" class="color-red"></i></a> foobar</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- <td>foobar</td>
+            <td>foobar</td>
+            <td>foobar</td>
+            <td>foobar</td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h4 class="forms-section"></h4>
+    <div class="units-row" style="margin-bottom:0em;">
+      <div class="unit-push-right">
+        <input type="button" id="layoutsavebtn" class="btn btn-big disabled" value="Tabelle erstellen">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="layoutviewedit" class="modal modalinner">
+  <div class="modalcontent">
+    <div class="units-row modalhead">
+      <span class="unit-50"><legend>Bearbeiten</legend></span>
+      <span class="unit-push-right"><a href="#" class="color-red close" onclick="$('#layoutviewedit').hide();"></a></span>
+    </div>
+    <span id="layoutvieweditindex" hidden></span>
+    <form method="post" action="javascript:void(0);" id="layoutvieweditform" class="forms forms-columnar">
+      <p>
+        <label>Spalte bearbeiten</label>
+        <ul class="forms-inline-list">
+          <li>
+            <input type="text" name="layoutfieldeditname" id="layoutfieldeditname">
+            <div class="forms-desc">Name der Spalte</div>
+          </li>
+          <li>
+            <select id="layoutfieldedittype">
+              <option>Text</option>
+              <option>Zahl</option>
+              <option>Datum</option>
+              <option>Preis</option>
+              <!-- <option>Anhang</option> -->
+            </select>
+            <div class="forms-desc">Format</div>
+          </li>
+          
+          <li>
+            <input type="submit" class="btn" id="editlayoutfieldbtn" value="Speichern">
+            <div class="forms-desc">&nbsp;</div>
+          </li>
+        </ul>
+      </p>
+    </form>
+  </div>
+</div>
+
+<div id="layoutviewhelp" class="modal modalinner">
+  <div class="modalcontent">
+    <div class="units-row modalhead">
+      <span class="unit-50"><legend>Hilfe</legend></span>
+      <span class="unit-push-right"><a href="#" class="color-red close" onclick="$('#layoutviewhelp').hide();"></a></span>
+    </div>
+    <div class="units-row">
+      <div class="unit-40">
+        <h4>Hallo</h4>
+        Zu Beginn eines jeden Katalogs (also jetzt) steht das Erstellen einer neuen Tabelle.
+        Überlege dir, welche Rubriken deine Tabelle braucht und wie der Inhalt formatiert werden soll.<br>
+        Wenn du die Tabelle erstellt hast, kannst du beginnen, sie mit Inhalt zu füllen.<br><br>
+        Das Video bietet eine kleine Anleitung für den Einstieg.<br>
+        <h5>Viel Spass!</h5>
+      </div>
+      <div class="unit-60" id="vimeocanvas">
+       <!-- VIMEO -->
+      </div>
+    </div>
+
+    <h4 class="forms-section"></h4>
+    <div class="units-row" style="margin-bottom:0em;">
+      <span class="unit-push-right">
+        <input type="button" class="btn btn-blue" onclick="$('#layoutviewhelp').hide();" value="Schliessen und Tabelle erstellen"></input>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div id="adddataview" class="modal">
+  <div class="modalcontent">
+    <div class="units-row modalhead">
+      <span class="unit-50"><legend id="dataviewlegend">Eintrag erstellen</legend> <a id="dataviewhelpbtn" onclick="$('#dataviewhelp').show();" class="btn"><i class="icon-question-sign"></i> Hilfe</a></span>
+      <span class="unit-push-right"><a href="#" class="color-red close" onclick="$('#adddataview').hide();"></a></span>
+    </div>
+    <form method="post" action="javascript:void(0);" id="dataviewform" class="forms forms-columnar">
+      <!-- <p>
+        <label class="bold">Text</label>
+        <input type="text" id="foo" placeholder="Text">
+      </p>
+      <p class="forms-inline">
+        <label class="bold">Preis</label>
+        <span class="input-prepend"><i class='icon-circle'></i></span><input type="text" name="preis">
+      </p>
+      <p>
+        <label class="bold" for="nummer">Nummer</label>
+        <input type="number" id="nummer" name="nummer" step="1">
+      </p>
+      <p>
+        <label class="bold" for="datum">Datum</label>
+        <input type="date" id="datum" name="datum">
+      </p>
+      <p>
+        <label class="bold" for="file">Datei upload</label>
+        <input type="file" id="file" name="file">
+      </p>
+      <p>
+        <input type="button" class="btn green" id="addatasubmitbtn" value="Speichern">
+        <input type="reset" class="btn color-red" value="Eingaben zurücksetzen">
+      </p>-->
+    </form>
+  </div>
+</div>
+
+<div id="dataviewhelp" class="modal modalinner">
+  <div class="modalcontent">
+    <div class="units-row modalhead">
+      <span class="unit-50"><legend>Hilfe</legend></span>
+      <span class="unit-push-right"><a href="#" class="color-red close" onclick="$('#dataviewhelp').hide();"></a></span>
+    </div>
+    In dieser Ansicht wird die ein Eintrag erstellt oder bearbeitet.
+    <ul>
+      <li>1. Daten eingeben.</li>
+      <li>2. (optional) Eingaben zurücksetzen.</li>
+      <li>3. Falls mehrere Einträge hintereinander geschrieben werden sollen, das Häkchen bei "Weiteren Eintrag schreiben" setzen.</li>
+      <li>4. "Speichern" klicken.</li>
+    </ul>
+    <a href="#" class="btn btn-big green" onclick="$('#dataviewhelp').hide();">Alles klar</i></a>
+  </div>
+</div>
+
+<div id="searchview" class="modal">
+  <div class="modalcontent">
+  <div class="units-row modalhead">
+    <span class="unit-50"><legend><i class='icon-search'></i> Katalog durchsuchen</legend></span>
+    <span class="unit-push-right"><a href="#" class="color-red close" onclick="$('#searchview').hide();"></i></a></span>
+  </div>
+
+  <form method="post" action="javascript:void(0);" id="" class="forms forms-columnar">
+    <p>
+      <label>Suchbegriff</label>
+      <input type="text" name="finesearchval" id="finesearchval" size="30"  />
+    </p>
+
+    <p>
+      <label>Spalte</label>
+      <select name="finesearchcols" id="finesearchcols">
+        <!-- <option>Alle Spalten</option> -->
+      </select>
+      <span class="forms-desc">Zu durchsuchende Spalte</span>
+    </p>
+
+    <p>
+      <input type="button" class="btn" id="finesearchbtn" value="Suchen">
+    </p>
+
+  </form>
+</div>
+</div>
+
+<div class="wrapper">
+  <br>
+  <br>
+  <br>
+  <div class="units-row">
+    <div id="edithead">
+      <button class="btn btn-blue" id="newentrybtn" tabindex="5"><i class="icon-pencil"></i> Neuer Eintrag</button>
+      <button class="btn" id="layouteditbtn" tabindex="6"><i class="icon-edit"></i> Tabellenkopf bearbeiten</button>
+    </div>
+    <form method="post" action="javascript:void(0);" class="forms unit-push-right">
+      <span class="btn-group">
+        <input type="text" id="searchval" class="input-search" placeholder="Suchbegriff" tabindex="1">
+        <button class="btn btn-round" id="searchbtn" tabindex="2"><i class="icon-search"></i> Suchen</button>
+        <button class="btn btn-round" id="searchviewbtn" tabindex="3"><i class="icon-cog"></i> Erweitert</button>
+      </span>
+      <button class="btn" id="resetsearch" tabindex="4">Zurücksetzen</button>
+    </form>
+  </div>
+
+  <div id="docstable" class="table-container">
+    <table class="width-100 table-hovered table-striped table-bordered">
+      <thead>
+        <tr class="thead-gray">
+          <!-- <th>foobar</th>
+          <th>foobar</th>
+          <th class="editbtns"></th> -->
+        </tr>
+      </thead>
+      <tbody>
+      <!-- 
+        <tr>
+          <td>foobar</td>
+          <td>foobar</td>
+          <td class="editbtns">
+            <span class="btn-group">
+              <input type="button" class="btn" id="editentrybtn" value="Bearbeiten">
+              <input type="button" class="btn color-red" id="deleteentrybtn" value="X">
+            </span>
+          </td>
+        </tr> -->
+
+      </tbody>
+    </table>
+    <div id="noentriesyet">
+      <br>
+      <strong class="color-red">&nbsp;&nbsp;&nbsp;Es gibt noch keine Einträge!</strong>
+      <br>
+      &nbsp;&nbsp;&nbsp;Oben auf "Bearbeiten" klicken um anschliessend neue Einträge hinzuzufügen.
+    </div>
+    <div id="nosearchresults">
+      <br>
+      <strong class="color-red">&nbsp;&nbsp;&nbsp;Keine Einträge für die Suche gefunden!</strong>
+      <br>
+    </div>
+  </div>
+
+</div>
+
+<script src="{baseURL}/static/js/edit.func.js"></script>

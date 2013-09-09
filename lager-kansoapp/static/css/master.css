@@ -1,0 +1,448 @@
+/* =Typography
+-----------------------------------------------------------------------------*/
+body {
+
+}
+
+
+/* =Layout
+-----------------------------------------------------------------------------*/
+.wrapper {
+	padding: 0px;
+	margin: 0px auto;
+}
+
+#previewheadline {
+  border-top: 1px solid #eee;
+  border-bottom: 0px;
+  padding: 0;
+  margin-bottom: 1.5em;
+  line-height: 0;
+  text-align: center;
+  color: #666;
+  display: none;
+}
+
+#layoutsavebtn {
+  text-align: center;
+}
+#previewclose {
+  display: none;
+}
+
+select#layoutfieldtype {
+  border-color: #aaa;
+  height: 28px;
+  line-height: 1;
+  padding: 3px;
+  -webkit-appearance: menulist-button;
+}
+
+#noentriesyet, #nosearchresults {
+  display: none;
+  position: relative;
+  width: 100%;
+  text-align: center;  
+}
+
+.modal .modalcontent {
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  padding: 12px 6px;
+  margin: 40px 5%;
+  z-index: 1020;
+  background: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #000;
+  line-height: 20px;
+}
+.layoutview form {
+  margin-bottom: 0px;
+}
+.modalhead {
+  height: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+#edithead, .editbtns, #nolayoutyet, #docstable {
+  display: none;
+}
+#edithead {
+  float: left;
+}
+.editbtns {
+  width: 78px;
+}
+.editbtns span {
+  white-space: nowrap;
+  display: inline;
+  width: 77px;
+}
+th#Erstellt:not(.collapsedhead), th#Aktualisiert:not(.collapsedhead) {
+  width: 115px;
+}
+
+#layoutpreviewcontainer thead tr th,
+#layoutpreviewcontainer tbody tr td {
+  min-width: 123px;
+}
+#layoutpreview tbody tr td, thead tr th {
+  cursor: default;
+}
+#layoutpreview thead tr th a {
+  cursor: pointer;
+}
+
+span.previewbtn {
+  line-height: 0em;
+}
+.modal .modalcontent legend {
+  float: left;
+}
+
+.modal {
+  position: fixed;
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 10000;
+}
+
+.modalinner {
+  /*margin: 60px;*/
+}
+
+#docstable {
+  padding: 0 0 1.65em 0;
+  border: 1px solid #ddd;
+  border-top: 0px;
+}
+.docstable-shadow {
+  box-shadow:
+    inset 10px 0 10px -10px rgba(100,100,100,0.5),
+    inset -10px 0 10px -10px rgba(100,100,100,0.5);
+}
+
+.thead-gray {
+  background: rgba(50,50,50,0.1);
+}
+
+table.table-striped tbody tr:nth-child(odd) td {
+  background-color: rgba(150,150,150,0.1);
+}
+
+#dataviewform,
+#dataviewformend, 
+#dataviewformend ul, 
+#dataviewformend ul li {
+  margin-bottom: 0em;
+}
+
+/* =Header
+-----------------------------------------------------------------------------*/
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  margin: 0px;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0px 0px 5px #aaa;
+  line-height: 35px;
+}
+#logo img {
+  margin-top: 3px;
+}
+.head #start, .head #title {
+  line-height: 35px;
+  font-size: 15px;
+  color: #222;
+  padding: 0 10px;
+  height: 35px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+}
+.head-separator {
+  margin: 0;
+  width: 0px;
+  border-left: 1px solid #fff;
+  line-height: 35px;
+  top: 0;
+  bottom: 0;
+  border-right: 1px solid #ccc;
+  height: 35px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+#docstable table thead tr, #docstable table tbody tr {
+  position: relative;
+}
+
+
+/* =Misc
+-----------------------------------------------------------------------------*/
+a[target="_blank"]:after,
+a[href^="http"]:after {
+  position: relative;
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPJJREFUeNp00TFrwkAYxvHEqCDVQVFBrCgupYug4GcRRwUVVAQXv4SLi0OXToFQKO1oP4KTiIPiIDjoUCiI0GpH/ydv4BBz8Avhvecud29Mw3vE0UEOf3jFzPII5zGEDxOoXBNLv8eCLD7wrtVM1Hw3wSiqeMYOIW1ugbB+pAxGeMI/KvjGRub72LvhRzjoISi1hHxRjRZsqV0fthTViCAm7wHZxJFNDXXpNo54kVBZQnM5nhoDudN1gerzm3aXKc4oYo0vHNxJ1aVfFLQFJ6SxkqMc9DZa0okGUkiiixI+b8PuzzAkUMcDthjj594fvQgwAD+rKaVaRKnfAAAAAElFTkSuQmCC);
+  margin-left: 1px;
+  bottom: -1px;
+}
+.close {
+  opacity: 1;
+  background-color: rgba(240,104,104,0.4);
+  border-radius: 2px;
+}
+.close:hover {
+  background-color: rgba(240,104,104,0.8);
+}
+.btn {
+  cursor: pointer;
+}
+
+#noscript {
+  text-align: center;
+  font-size: 2em;
+  line-height: 2em;
+  background: #fff;
+  box-shadow: 0px,0px,10px,#aaa;
+}
+.datescols {
+  white-space: nowrap;
+  overflow: hidden;
+}
+.collapsedhead, .collapsedhead:hover {
+  border-bottom: 0px !important;
+  position: relative;
+  width: 10px;
+  padding-left: 4px;
+  padding-right: 3px;
+}
+.collapsedhead:after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0px;
+  float: right;
+  width: 0px;
+  height: 0px;
+  border-width: 30px 22px 0px 0px;
+  border-style: solid solid solid solid;
+  border-color: #ebebeb transparent transparent transparent;
+}
+.collapsedtr, .collapsedtr:hover {
+  background: transparent;
+  border-left: 1px solid #ddd;
+}
+
+span.tooltip {
+  display: none;
+  position: absolute;
+  text-decoration: none;
+  font-weight: normal;
+  color: #fff;
+  padding: 0 7px 0 9px;
+  line-height: 22px;
+  font-size: 12px;
+  background: #444;
+  z-index: 10000009;
+  border: none;
+  text-shadow: 0 1px 0 #000;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+span.tooltip:before {   /* Dreieck */
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 27px;
+  float: left;
+  width: 0px;
+  height: 0px;
+  border-width: 0px 11px 10px 11px;
+  border-style: solid solid solid solid;
+  border-color: transparent transparent #444 transparent;
+}
+
+#editentrybtn:hover span.tooltip,
+#editentrybtn:active span.tooltip,
+#deleteentrybtn:hover span.tooltip,
+#deleteentrybtn:active span.tooltip,
+#layoutpreviewcontainer a:hover span.tooltip,
+#layoutpreviewcontainer a:active span.tooltip {
+    display: block;
+    margin: 17px -33px;
+}
+
+a.showcolslink:hover,
+a.showcolslink:active,
+a.sortcolslink:hover,
+a.sortcolslink:active {
+  color: #222;
+} 
+a.showcolslink:hover span.tooltip,
+a.showcolslink:active span.tooltip {
+    display: block;
+    margin: 10px -31px;
+}
+a.sortcolslink:hover span.tooltip,
+a.sortcolslink:active span.tooltip {
+    display: block;
+    margin: 10px -11px;
+}
+button#resetsearch {
+  display: none;
+}
+
+th.sortedcol {
+  /*box-shadow: inset 0px 5px 15px #ABB3BF;*/
+  background: rgb(176,212,227); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(176,212,227,1) 0%, rgba(136,186,207,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(176,212,227,1)), color-stop(100%,rgba(136,186,207,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(176,212,227,1) 0%,rgba(136,186,207,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(176,212,227,1) 0%,rgba(136,186,207,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(176,212,227,1) 0%,rgba(136,186,207,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(176,212,227,1) 0%,rgba(136,186,207,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0d4e3', endColorstr='#88bacf',GradientType=0 ); /* IE6-9 */
+
+}
+
+th.sortedcol:after {
+  border-color: rgba(136,186,207,1) transparent transparent transparent;
+}
+
+th.sortedcol a {
+  color: #666;
+}
+
+div#popup {
+  position: absolute;
+  z-index: 10000000;
+  display: none;
+  top: 30%;
+  left: 42%;
+  padding: 20px;
+  background: rgba(20,20,20,0.7);
+  border-radius: 5px;
+  box-shadow: 0 0 10px #111;
+  min-width: 30px;
+  min-height: 20px;
+  font-size: 25px;
+}
+
+.buttonright {
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  top: 0px;
+  right: 0px;
+  border-style: solid solid solid solid;
+  border-width: 13px 4px 13px 13px;
+  border-color: rgba(30,30,30,0.1) rgba(30,30,30,0.1) rgba(30,30,30,0.1) transparent;
+  -webkit-border-top-right-radius: 1px;
+  -moz-border-top-right-radius: 1px;
+  border-top-right-radius: 1px;
+  -webkit-border-bottom-right-radius: 1px;
+  -moz-border-bottom-right-radius: 1px;
+  border-bottom-right-radius: 1px;
+}
+
+.buttonleft {
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  top: 0px;
+  left: 0px;
+  border-style: solid solid solid solid;
+  border-width: 15px 15px 15px 4px;
+  border-color: rgba(30,30,30,0.1) transparent rgba(30,30,30,0.1) rgba(30,30,30,0.1);
+  -webkit-border-top-left-radius: 1px;
+  -moz-border-top-left-radius: 1px;
+  border-top-left-radius: 1px;
+  -webkit-border-bottom-left-radius: 1px;
+  -moz-border-bottom-left-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+
+.rel {
+  position: relative;
+}
+
+/* =dblist
+-----------------------------------------------------------------------------*/
+td#listdbtitle {
+  font-size: large;
+  font-weight: bold;
+}
+table.table-bordered td:first-child,
+table.table-bordered th:first-child {
+  border-left: 0px solid #ddd;
+}
+table.table-bordered td:last-child,
+table.table-bordered th:last-child {
+  border-right: 0px solid #ddd;
+}
+table.table-hovered thead tr th {
+  white-space: nowrap;
+  /*overflow: hidden;*/
+}
+@-moz-document url-prefix() {
+    table.table-hovered thead tr th {
+      white-space: normal;
+    }
+}
+table.table-hovered thead tr:hover th {
+background-color: #ebebeb;
+}
+table th a {text-decoration: none;}
+
+/* =layoutpreview
+-----------------------------------------------------------------------------*/
+#layoutvieweditindex {
+  display: none;
+}
+
+
+/* =BASE-REM SIZING
+-----------------------------------------------------------------------------*/
+@media (min-width: 1520px) {
+  .wrapper, .modal .modalcontent {
+      max-width: 1400px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .wrapper, .modal .modalcontent {
+      max-width: 1250px;
+  }
+}
+
+/* target screen width  */
+@media (max-width: 1280px) {
+  .wrapper, .modal .modalcontent {
+      max-width: 1150px;
+  }
+}
+  
+@media (max-width: 1160px) {
+  .wrapper, .modal .modalcontent {
+      max-width: 1000px;
+  }
+}
+  
+@media (max-width: 1040px) {
+  .wrapper, .modal .modalcontent {
+      max-width: 940px;
+  }
+}

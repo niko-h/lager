@@ -1,0 +1,82 @@
+<div class="head">
+  <div class="row wrapper">
+    <a id="logo" href="{baseURL}/dblist"><img src="{baseURL}/static/css/lagerklein2.png" alt="lager"></a> 
+    <span class="head-separator"></span>
+    <a id="title" href="#">Katalogübersicht</h1></a>
+    <!-- <div class="push-right">
+      <span class="head-separator"></span>
+      <a id="prefbtn" class="btn" href="#"><i class="icon-cog"></i> Einstellungen</a> 
+      <a href="?logout" name="logoutbtn" id="logoutbtn" class="btn red"><i class="icon-off"></i> Abmelden</a>
+    </div> -->
+  </div>
+</div>
+
+<div id="createdbview" class="modal">
+  <div class="modalcontent">
+    <div class="units-row modalhead">
+      <span class="half"><legend><i class="icon-pencil"></i>  Hinzufügen</legend></span>
+      <span class="unit-push-right"><a href="#" class="close" onclick="$('#createdbview').hide();"></a></span>
+    </div>
+    <form method="post" action="javascript:void(0);" id="" class="forms forms-columnar">
+      <p>
+        <label>Neuer Katalog</label>
+        <ul class="forms-inline-list">
+          <li>
+            <input type="text" name="dblv-newdbval" id="dblv-newdbval">
+          </li>
+          <li>
+            <button class="btn" id="dblv-newdbsubmitbtn"><i class="icon-pencil"></i> Erstellen</button>
+          </li>
+          <div class="forms-desc">Name des Katalogs</div>
+        </ul>
+      </p>
+    </form>
+  </div>
+</div>
+
+<div class="wrapper">
+  <br>
+  <br>
+  <br>
+  <div class="units-row">
+    <div class="unit-50">
+      <button class="btn btn-blue" id="dblv-newdbbtn"><i class="icon-pencil"></i> Neuen Katalog erstellen</button>
+    </div>
+    <form method="post" action="javascript:void(0);" class="forms unit-push-right">
+      <span class="btn-group">
+        <input type="text" id="dbsearch" class="input-search" placeholder="Suchbegriff" />
+        <button class="btn btn-round" id="dbsearchbtn"><i class="icon-search"></i> Suchen</button>
+      </span>
+      <button class="btn" id="resetsearch">Zurücksetzen</button>
+    </form>
+  </div>
+
+  <div id="dblist">
+    <fieldset>
+      <legend>Kataloge</legend>
+      <table class="width-100 table-striped table-hovered">
+        <tbody>
+
+          <!-- {?datenbanken}
+            {#datenbanken}
+              <tr>
+                <td>{value.title}</td>
+                <td>
+                  <span class="btn-group">
+                    <a href="{baseURL}/show/{value.title}" class="btn"><i class="icon-eye-open"></i> Anzeigen</a>
+                    <a href="{baseURL}/edit/{value.title}" class="btn"><i class="icon-edit"></i> Bearbeiten</a>
+                  </span>
+                </td>
+              </tr>
+            {/datenbanken}
+          {:else}
+            Es gibt noch keine Katalog!
+          {/datenbanken} -->
+
+        </tbody>
+      </table>
+    </fieldset>
+  </div>
+</div>
+
+<script src="{baseURL}/static/js/dblist.func.js"></script>
