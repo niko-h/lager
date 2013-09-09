@@ -5,7 +5,7 @@ A simple cataloging software.
 ## Demo
 
 * http://ba530080.cloudant.com/ba/_design/ba/_rewrite
-* User: ba530080
+* User: lagertest
 * Pass: lagerpass
 
 
