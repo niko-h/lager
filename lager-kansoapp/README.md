@@ -1,13 +1,12 @@
-Lager
+# Lager
 
 A simple cataloging software.
 
 ## Demo
 
-http://ba530080.cloudant.com/ba/_design/ba/_rewrite
-
-User: ba530080
-Pass: lagerpass
+* http://ba530080.cloudant.com/ba/_design/ba/_rewrite
+* User: ba530080
+* Pass: lagerpass
 
 
 ## Requirements
@@ -17,8 +16,7 @@ Pass: lagerpass
 
 ## Install 
 
-This app uses the Kanso admin to edit your data.  Push the lager app
-to your couch once you cloned or unpacked it:
+Push the lager app to your couch once you cloned or unpacked it:
 
 ```
 git clone https://github.com/niko-h/lager/
