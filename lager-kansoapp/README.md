@@ -1,6 +1,13 @@
-# BA Lager
+Lager
 
-Description
+A simple cataloging software.
+
+## Demo
+
+http://ba530080.cloudant.com/ba/_design/ba/_rewrite
+
+User: ba530080
+Pass: lagerpass
 
 
 ## Requirements
@@ -10,44 +17,19 @@ Description
 
 ## Install 
 
-This app uses the Kanso admin to edit your data.  Push the pages and admin apps
+This app uses the Kanso admin to edit your data.  Push the lager app
 to your couch once you cloned or unpacked it:
 
 ```
-git clone https://github.com/mandric/pages
-cd pages
-kanso push pages
-```
-
-```
-git clone https://github.com/mandric/admin
-cd admin
-kanso push pages 
+git clone https://github.com/niko-h/lager/
+cd lager/lager-kansoapp
+kanso push lager
 ```
 
 ## Usage
 
-JS:
-```
-var db = require('db');
-db
-```
-db->exports.EventEmitter
-  allObs: function (callback) {
-  createDatabase: function (name, callback) {
-  current: function () {
-  deleteDatabase: function (name, callback) {
-  encode: function (str) {
-  escapeUrlParams: function (obj) {
-  guessCurrent: function (loc) {
-  newUUID: function (cacheNum, callback) {
-  request: function (options, callback) {
-  stringifyQuery: function (query) {
-  use: function (url) {
-  __proto__:Object
+go to //localhost:5984/lager/_design/lager/_rewrite (assuming your couchdb runs under //localhost:5984)
 
-```
-db.current().saveDoc({_id: 'foo', text: 'bar'}, function () {});
+## Copyright and license
 
-db.current().getDoc('foo', function (err, doc) { console.log(doc); });
-```
+"THE WURZEL LICENSE" (Revision 4):  <kontakt@nikolaushoefer.de> created this software. You can do with it whatever you want under the following conditions: This licence must be included with the software and refer to the author. The software must only be used for non-military uses and only in compliance with human rights. All parts of this material must remain open source. If we meet some day, and you think this stuff is worth it, you can buy me a beer in return. Niko

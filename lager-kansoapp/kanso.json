@@ -1,7 +1,7 @@
 {
-    "name": "ba",
+    "name": "lager",
     "version": "0.0.1",
-    "description": "BA Lager App",
+    "description": "Lager App",
     "load": "lib/app",
     "modules": "lib",
     "attachments": "static",
