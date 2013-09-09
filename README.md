@@ -1,0 +1,4 @@
+lager
+=====
+
+Eine einfache Katalogisierungssoftware
