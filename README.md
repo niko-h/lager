@@ -26,7 +26,11 @@ kanso push lager
 
 ## Usage
 
-go to //localhost:5984/lager/_design/lager/_rewrite (assuming your couchdb runs under //localhost:5984)
+Go to 
+```
+//localhost:5984/lager/_design/lager/_rewrite
+```
+(assuming your couchdb runs under //localhost:5984)
 
 ## Copyright and license
 
