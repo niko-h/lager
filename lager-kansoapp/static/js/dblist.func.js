@@ -202,7 +202,9 @@ function renderList(data) {
     
   });
   $("#dblist fieldset table tbody").html('');
+  $("#dblist fieldset table tbody").hide();
   $("#dblist fieldset table tbody").append(list);
+  $("#dblist fieldset table tbody").fadeIn(400);
   if (data.total_rows==0) {
     $("#dblist fieldset table tbody").html('Es gibt noch keinen Katalog!');
   };

@@ -794,7 +794,9 @@ function renderLayoutPreview() {
   }
 
   if (list!="") {
-    $('#previewheadline').show();
+    $("#layoutpreview").hide();
+    $('#previewheadline').fadeIn(400);
+    $("#layoutpreview").fadeIn(400);
     $('#previewclose').show();
     $('#layoutsavebtn').removeClass('disabled').addClass('btn-blue');
   };
