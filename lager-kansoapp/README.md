@@ -4,7 +4,7 @@ A simple cataloging software.
 
 ## Demo
 
-* http://ba530080.cloudant.com/ba/_design/ba/_rewrite
+* http://ba530080.cloudant.com/ba/_design/ba/_rewrite/dblist
 * User: lagertest
 * Pass: lagerpass
 
